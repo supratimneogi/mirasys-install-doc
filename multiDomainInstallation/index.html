@@ -1,0 +1,1394 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../defaultInstallationAuto/">
+      
+      
+        <link rel="next" href="../multiDomainInstallationAuto/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Manual Installation - Mirasys Standalone Installation Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multi-domain-mirasys-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mirasys Standalone Installation Docs" class="md-header__button md-logo" aria-label="Mirasys Standalone Installation Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mirasys Standalone Installation Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manual Installation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../non_technical/" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  Environment Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../defaultInstallation/" class="md-tabs__link">
+          
+  
+  Default Installation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Multi-Domain Installation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshoot/" class="md-tabs__link">
+        
+  
+    
+  
+  Troubleshooting Usage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mirasys Standalone Installation Docs" class="md-nav__button md-logo" aria-label="Mirasys Standalone Installation Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mirasys Standalone Installation Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../non_technical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Environment Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Environment Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manual Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_auto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automated Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Default Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Default Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../defaultInstallation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manual Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../defaultInstallationAuto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automated Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Multi-Domain Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Multi-Domain Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Manual Installation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Manual Installation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-get-the-project-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Get the Project Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-update-configuration-appenvdev" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Update Configuration (app.env.dev)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-edit-docker-configuration-docker-composelocalyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Edit Docker Configuration (docker-compose.local.yaml)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deploy-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Deploy the Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-configure-the-host-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configure the Host File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-set-up-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Set Up the Database
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiDomainInstallationAuto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automated Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-get-the-project-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Get the Project Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-update-configuration-appenvdev" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Update Configuration (app.env.dev)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-edit-docker-configuration-docker-composelocalyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Edit Docker Configuration (docker-compose.local.yaml)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deploy-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Deploy the Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-configure-the-host-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configure the Host File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-set-up-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Set Up the Database
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="multi-domain-mirasys-setup">Multi-Domain Mirasys Setup</h1>
+<p>This guide helps you configure the Mirasys application with support for multiple custom domain names and ports.</p>
+<hr />
+<h2 id="1-get-the-project-files">1. Get the Project Files</h2>
+<p>Clone the project repository:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;project_repository_link&gt;
+</code></pre></div>
+<hr />
+<h2 id="2-update-configuration-appenvdev">2. Update Configuration (<code>app.env.dev</code>)</h2>
+<p>Update the following keys in your <code>app.env.dev</code> file to reflect your custom domain and port setup:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># Environment configuration for Docker Compose
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>#=============================================
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a># Domain and port configuration
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>DOMAIN=nagpur.mirasys.com
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>STATIC_PORT=8041
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>PREFIX=nagpur
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># Service URLs
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>PMA_URL=phpmyadmin.${DOMAIN}
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>MIRASYS_FRNT_CENT_URL=frontend-central.${DOMAIN}
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>MIRASYS_FRNT_URL=${DOMAIN}
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>MIRASYS_FRNT_NEW_URL=frontend-new.demo.${DOMAIN}
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>MIRASYS_API_GATEWAY_URL=api-gateway.${DOMAIN}
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>MIRASYS_API_TENANT_GATEWAY_URL=tenant-apigateway.${DOMAIN}
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>MIRASYS_BACKEND_URL=backend.${DOMAIN}
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>MIRASYS_STREAM_URL=stream.${DOMAIN}
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>TRAEFIK_URL=traefik.${DOMAIN}
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>RABBITMQ_URL=rabbitmq.${DOMAIN}
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>INFRA_URL=infra.${DOMAIN}
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a># Database configuration
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>MASTER_DATABASE=nagpur_mirasys_master
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>ROOT_PASSWORD=ows@123
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>DATABASE_NAME=nagpur_mirasys_tenant
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a># JWT configuration
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>JWT_SECRET=pitangentanalyticsandtechnologysolutionspvtltd
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>JWT_EXPIRES_IN=14d
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a># Frontend Central configuration
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>#==============================
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>REACT_APP_API_URL_CENTRAL=http://${MIRASYS_API_GATEWAY_URL}:${STATIC_PORT}/graphql
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a># Frontend Tenant configuration
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>#==============================
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>REACT_APP_API_URL=http://${MIRASYS_API_TENANT_GATEWAY_URL}:${STATIC_PORT}/graphql
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>REACT_APP_API_BASE_URL=http://${MIRASYS_API_TENANT_GATEWAY_URL}:${STATIC_PORT}/api/v1
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>REACT_APP_IMAGE_URL=http://${MIRASYS_API_TENANT_GATEWAY_URL}:${STATIC_PORT}/uploads
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>REACT_APP_GOOGLE_MAP_API_KEY=AIzaSyCIoG0aS1v6spS5xyjqEvxLP5M-5iRhKUM
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>REACT_APP_API_SOCKET_URL=http://${MIRASYS_API_TENANT_GATEWAY_URL}:${STATIC_PORT}
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>REACT_APP_STREAM_URL=http://${MIRASYS_STREAM_URL}:${STATIC_PORT}
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>REACT_APP_OPEN_STREET_API_KEY=ceb2b208ee1049a48db896178f203f57
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a># API Central configuration
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>#==============================
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>CN_PORT=4001
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>CN_DBUSERNAME=root
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>CN_DBPASSWORD=${ROOT_PASSWORD}
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>CN_DBDATABASE=${DATABASE_NAME}
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>CN_DBHOST=db
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>CN_CENTRAL_DB_USERNAME=root
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>CN_CENTRAL_DB_PASSWORD=${ROOT_PASSWORD}
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>CN_CENTRAL_DB_NAME=${MASTER_DATABASE}
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>CN_CENTRAL_DBHOST=db
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>CN_FRONT_END_URL=${MIRASYS_FRNT_CENT_URL}:${STATIC_PORT}
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>CN_MAIL_DRIVER=smtp
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>CN_MAIL_HOST=smtp.gmail.com
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>CN_MAIL_PORT=587
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>CN_MAIL_USERNAME=wellsyntest@gmail.com
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>CN_MAIL_PASSWORD=onxdxumdzwuztipe
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>CN_MAIL_ENCRYPTION=tls
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>CN_MAIL_FROM_ADDRESS=wellsyntest@gmail.com
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>CN_MAIL_FROM_NAME=Welldom TheraSync
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>CN_EXISTING_API_URL=http://mirasys_backend:3001
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a># API Tenant configuration
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>#==============================
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>TT_PORT=4001
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>TT_DBUSERNAME=root
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>TT_DBPASSWORD=${ROOT_PASSWORD}
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>TT_DBDATABASE=${DATABASE_NAME}
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>TT_DBHOST=db
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>TT_CENTRAL_DB_USERNAME=root
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>TT_CENTRAL_DB_PASSWORD=${ROOT_PASSWORD}
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>TT_CENTRAL_DB_NAME=${MASTER_DATABASE}
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>TT_CENTRAL_DBHOST=db
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>TT_FRONT_END_URL=${MIRASYS_FRNT_URL}:${STATIC_PORT}
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>TT_MAIL_DRIVER=smtp
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>TT_MAIL_HOST=smtp.gmail.com
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>TT_MAIL_PORT=587
+<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>TT_MAIL_USERNAME=wellsyntest@gmail.com
+<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>TT_MAIL_PASSWORD=onxdxumdzwuztipe
+<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>TT_MAIL_ENCRYPTION=tls
+<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>TT_MAIL_FROM_ADDRESS=wellsyntest@gmail.com
+<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>TT_MAIL_FROM_NAME=Welldom TheraSync
+<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>TT_EXISTING_API_URL=http://mirasys_backend:3001
+<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>TT_API_SERVER_URL=http://${MIRASYS_API_TENANT_GATEWAY_URL}
+<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>TT_UPLOAD_IMAGE_URL=http://mirasys_api_tenant_gateway:4001/uploads
+<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>TT_VS_INFO_URL=http://172.18.0.1:6554/startvs
+<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>
+<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a># Backend configuration
+<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>#==============================
+<a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>BE_PORT=3001
+<a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>BE_MYSQL_USER=root
+<a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>BE_MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
+<a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>BE_MYSQL_DATABASE=${DATABASE_NAME}
+<a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>BE_MYSQL_LOCAL_PORT=3306
+<a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a>BE_CENTRAL_DB_USERNAME=root
+<a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>BE_CENTRAL_DB_PASSWORD=${ROOT_PASSWORD}
+<a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a>BE_CENTRAL_DB_NAME=${MASTER_DATABASE}
+<a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>BE_CENTRAL_DBHOST=db
+<a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a>BE_MYSQL_HOST=db
+<a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a>BE_APP_URL=${MIRASYS_BACKEND_URL}
+<a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a>
+<a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a># elasticsearch configuration URLs
+<a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>ELASTICSEARCH_URL=http://${PREFIX}_elasticsearch:9200
+</code></pre></div>
+<hr />
+<h2 id="3-edit-docker-configuration-docker-composelocalyaml">3. Edit Docker Configuration (<code>docker-compose.local.yaml</code>)</h2>
+<p>Update the container names and port settings:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4.2.5&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Define a reusable network configuration</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">x-mirasys-network</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;mirasys-network</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mirasys-network</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_traefik</span><span class="p">:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">traefik:v3.0.0-beta5</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_traefik_mirasys</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--log.level=DEBUG&quot;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--api.insecure=true&quot;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--providers.docker=true&quot;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--providers.docker.exposedbydefault=false&quot;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{STATIC_PORT}}:80&quot;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{TRAEFIK_PORT}}:8080&quot;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/docker.sock:/var/run/docker.sock</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;phpmyadmin&quot;</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{C_PREFIX}}_infra&quot;</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{C_PREFIX}}_mirasys_api_gateway&quot;</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{C_PREFIX}}_mirasys_frontend_central&quot;</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{C_PREFIX}}_mirasys_frnt&quot;</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{C_PREFIX}}_mirasys_backend&quot;</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;rabbitmq&quot;</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{C_PREFIX}}_mirasys_streaming&quot;</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{C_PREFIX}}_mirasys_api_tenant_gateway&quot;</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_traefik.rule=Host(`${TRAEFIK_URL}`)&quot;</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_traefik.service=api@internal&quot;</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_traefik.middlewares=traefik-auth&quot;</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.middlewares.traefik-auth.basicauth.users=systemteam:$2a$10$1kocyz5oVBUYlojfFDatPeYgpyx8yM6ATVj/W2yE/E/fLTlRlXYSe&quot;</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_infra</span><span class="p">:</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./infra</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_infra</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/docker.sock:/var/run/docker.sock</span>
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./infra:/app</span>
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_frnt:/mirasys_frnt</span>
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.${C_PREFIX}_infra.rule=Host(`${INFRA_URL}`)&quot;</span>
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.${C_PREFIX}_infra.loadbalancer.server.port=5000&quot;</span>
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_mirasys_api_gateway</span><span class="p">:</span>
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_api_gateway/</span>
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_mirasys_api_gateway</span>
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq</span>
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_infra</span>
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_api_gateway:/app</span>
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PORT=${CN_PORT}</span>
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBUSERNAME=${CN_DBUSERNAME}</span>
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBPASSWORD=${CN_DBPASSWORD}</span>
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBDATABASE=${CN_DBDATABASE}</span>
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBHOST=${CN_DBHOST}</span>
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_USERNAME=${CN_CENTRAL_DB_USERNAME}</span>
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_PASSWORD=${CN_CENTRAL_DB_PASSWORD}</span>
+<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_NAME=${CN_CENTRAL_DB_NAME}</span>
+<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DBHOST=${CN_CENTRAL_DBHOST}</span>
+<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JWT_SECRET=${JWT_SECRET}</span>
+<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JWT_EXPIRES_IN=${JWT_EXPIRES_IN}</span>
+<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FRONT_END_URL=${CN_FRONT_END_URL}</span>
+<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_DRIVER=${CN_MAIL_DRIVER}</span>
+<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_HOST=${CN_MAIL_HOST}</span>
+<a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_PORT=${CN_MAIL_PORT}</span>
+<a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_USERNAME=${CN_MAIL_USERNAME}</span>
+<a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_PASSWORD=${CN_MAIL_PASSWORD}</span>
+<a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_ENCRYPTION=${CN_MAIL_ENCRYPTION}</span>
+<a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_FROM_ADDRESS=${CN_MAIL_FROM_ADDRESS}</span>
+<a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_FROM_NAME=${CN_MAIL_FROM_NAME}</span>
+<a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXISTING_API_URL=${CN_EXISTING_API_URL}</span>
+<a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-99" name="__codelineno-2-99" href="#__codelineno-2-99"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_mirasys_api_gateway.rule=Host(`${MIRASYS_API_GATEWAY_URL}`)&quot;</span>
+<a id="__codelineno-2-100" name="__codelineno-2-100" href="#__codelineno-2-100"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.{{C_PREFIX}}_mirasys_api_gateway.loadbalancer.server.port=4001&quot;</span>
+<a id="__codelineno-2-101" name="__codelineno-2-101" href="#__codelineno-2-101"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-102" name="__codelineno-2-102" href="#__codelineno-2-102"></a>
+<a id="__codelineno-2-103" name="__codelineno-2-103" href="#__codelineno-2-103"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_mirasys_api_tenant_gateway</span><span class="p">:</span>
+<a id="__codelineno-2-104" name="__codelineno-2-104" href="#__codelineno-2-104"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-2-105" name="__codelineno-2-105" href="#__codelineno-2-105"></a><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_api_tenant_gateway/</span>
+<a id="__codelineno-2-106" name="__codelineno-2-106" href="#__codelineno-2-106"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+<a id="__codelineno-2-107" name="__codelineno-2-107" href="#__codelineno-2-107"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_mirasys_api_tenant_gateway</span>
+<a id="__codelineno-2-108" name="__codelineno-2-108" href="#__codelineno-2-108"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-109" name="__codelineno-2-109" href="#__codelineno-2-109"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-110" name="__codelineno-2-110" href="#__codelineno-2-110"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-111" name="__codelineno-2-111" href="#__codelineno-2-111"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo</span>
+<a id="__codelineno-2-112" name="__codelineno-2-112" href="#__codelineno-2-112"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<a id="__codelineno-2-113" name="__codelineno-2-113" href="#__codelineno-2-113"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-114" name="__codelineno-2-114" href="#__codelineno-2-114"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq</span>
+<a id="__codelineno-2-115" name="__codelineno-2-115" href="#__codelineno-2-115"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_infra</span>
+<a id="__codelineno-2-116" name="__codelineno-2-116" href="#__codelineno-2-116"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-117" name="__codelineno-2-117" href="#__codelineno-2-117"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_api_tenant_gateway:/app</span>
+<a id="__codelineno-2-118" name="__codelineno-2-118" href="#__codelineno-2-118"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-119" name="__codelineno-2-119" href="#__codelineno-2-119"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PORT=${TT_PORT}</span>
+<a id="__codelineno-2-120" name="__codelineno-2-120" href="#__codelineno-2-120"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBUSERNAME=${TT_DBUSERNAME}</span>
+<a id="__codelineno-2-121" name="__codelineno-2-121" href="#__codelineno-2-121"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBPASSWORD=${TT_DBPASSWORD}</span>
+<a id="__codelineno-2-122" name="__codelineno-2-122" href="#__codelineno-2-122"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBDATABASE=${TT_DBDATABASE}</span>
+<a id="__codelineno-2-123" name="__codelineno-2-123" href="#__codelineno-2-123"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBHOST=${TT_DBHOST}</span>
+<a id="__codelineno-2-124" name="__codelineno-2-124" href="#__codelineno-2-124"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_USERNAME=${TT_CENTRAL_DB_USERNAME}</span>
+<a id="__codelineno-2-125" name="__codelineno-2-125" href="#__codelineno-2-125"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_PASSWORD=${TT_CENTRAL_DB_PASSWORD}</span>
+<a id="__codelineno-2-126" name="__codelineno-2-126" href="#__codelineno-2-126"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_NAME=${TT_CENTRAL_DB_NAME}</span>
+<a id="__codelineno-2-127" name="__codelineno-2-127" href="#__codelineno-2-127"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DBHOST=${TT_CENTRAL_DBHOST}</span>
+<a id="__codelineno-2-128" name="__codelineno-2-128" href="#__codelineno-2-128"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JWT_SECRET=${JWT_SECRET}</span>
+<a id="__codelineno-2-129" name="__codelineno-2-129" href="#__codelineno-2-129"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JWT_EXPIRES_IN=${JWT_EXPIRES_IN}</span>
+<a id="__codelineno-2-130" name="__codelineno-2-130" href="#__codelineno-2-130"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FRONT_END_URL=${TT_FRONT_END_URL}</span>
+<a id="__codelineno-2-131" name="__codelineno-2-131" href="#__codelineno-2-131"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_DRIVER=${TT_MAIL_DRIVER}</span>
+<a id="__codelineno-2-132" name="__codelineno-2-132" href="#__codelineno-2-132"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_HOST=${TT_MAIL_HOST}</span>
+<a id="__codelineno-2-133" name="__codelineno-2-133" href="#__codelineno-2-133"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_PORT=${TT_MAIL_PORT}</span>
+<a id="__codelineno-2-134" name="__codelineno-2-134" href="#__codelineno-2-134"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_USERNAME=${TT_MAIL_USERNAME}</span>
+<a id="__codelineno-2-135" name="__codelineno-2-135" href="#__codelineno-2-135"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_PASSWORD=${TT_MAIL_PASSWORD}</span>
+<a id="__codelineno-2-136" name="__codelineno-2-136" href="#__codelineno-2-136"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_ENCRYPTION=${TT_MAIL_ENCRYPTION}</span>
+<a id="__codelineno-2-137" name="__codelineno-2-137" href="#__codelineno-2-137"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_FROM_ADDRESS=${TT_MAIL_FROM_ADDRESS}</span>
+<a id="__codelineno-2-138" name="__codelineno-2-138" href="#__codelineno-2-138"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAIL_FROM_NAME=${TT_MAIL_FROM_NAME}</span>
+<a id="__codelineno-2-139" name="__codelineno-2-139" href="#__codelineno-2-139"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXISTING_API_URL=${TT_EXISTING_API_URL}</span>
+<a id="__codelineno-2-140" name="__codelineno-2-140" href="#__codelineno-2-140"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">API_SERVER_URL=${TT_API_SERVER_URL}</span>
+<a id="__codelineno-2-141" name="__codelineno-2-141" href="#__codelineno-2-141"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UPLOAD_IMAGE_URL=${TT_UPLOAD_IMAGE_URL}</span>
+<a id="__codelineno-2-142" name="__codelineno-2-142" href="#__codelineno-2-142"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VS_INFO_URL=${TT_VS_INFO_URL}</span>
+<a id="__codelineno-2-143" name="__codelineno-2-143" href="#__codelineno-2-143"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ELASTICSEARCH_URL=${ELASTICSEARCH_URL}</span>
+<a id="__codelineno-2-144" name="__codelineno-2-144" href="#__codelineno-2-144"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-145" name="__codelineno-2-145" href="#__codelineno-2-145"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-146" name="__codelineno-2-146" href="#__codelineno-2-146"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_mirasys_api_tenant_gateway.rule=Host(`${MIRASYS_API_TENANT_GATEWAY_URL}`)&quot;</span>
+<a id="__codelineno-2-147" name="__codelineno-2-147" href="#__codelineno-2-147"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.{{C_PREFIX}}_mirasys_api_tenant_gateway.loadbalancer.server.port=4001&quot;</span>
+<a id="__codelineno-2-148" name="__codelineno-2-148" href="#__codelineno-2-148"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-149" name="__codelineno-2-149" href="#__codelineno-2-149"></a>
+<a id="__codelineno-2-150" name="__codelineno-2-150" href="#__codelineno-2-150"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_mirasys_frnt</span><span class="p">:</span>
+<a id="__codelineno-2-151" name="__codelineno-2-151" href="#__codelineno-2-151"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-2-152" name="__codelineno-2-152" href="#__codelineno-2-152"></a><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_frnt/</span>
+<a id="__codelineno-2-153" name="__codelineno-2-153" href="#__codelineno-2-153"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+<a id="__codelineno-2-154" name="__codelineno-2-154" href="#__codelineno-2-154"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_mirasys_frnt</span>
+<a id="__codelineno-2-155" name="__codelineno-2-155" href="#__codelineno-2-155"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-156" name="__codelineno-2-156" href="#__codelineno-2-156"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-157" name="__codelineno-2-157" href="#__codelineno-2-157"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-158" name="__codelineno-2-158" href="#__codelineno-2-158"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<a id="__codelineno-2-159" name="__codelineno-2-159" href="#__codelineno-2-159"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-160" name="__codelineno-2-160" href="#__codelineno-2-160"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq</span>
+<a id="__codelineno-2-161" name="__codelineno-2-161" href="#__codelineno-2-161"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_infra</span>
+<a id="__codelineno-2-162" name="__codelineno-2-162" href="#__codelineno-2-162"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-163" name="__codelineno-2-163" href="#__codelineno-2-163"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_frnt:/app</span>
+<a id="__codelineno-2-164" name="__codelineno-2-164" href="#__codelineno-2-164"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-165" name="__codelineno-2-165" href="#__codelineno-2-165"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REACT_APP_API_URL=${REACT_APP_API_URL}</span>
+<a id="__codelineno-2-166" name="__codelineno-2-166" href="#__codelineno-2-166"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}</span>
+<a id="__codelineno-2-167" name="__codelineno-2-167" href="#__codelineno-2-167"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REACT_APP_IMAGE_URL=${REACT_APP_IMAGE_URL}</span>
+<a id="__codelineno-2-168" name="__codelineno-2-168" href="#__codelineno-2-168"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REACT_APP_GOOGLE_MAP_API_KEY=${REACT_APP_GOOGLE_MAP_API_KEY}</span>
+<a id="__codelineno-2-169" name="__codelineno-2-169" href="#__codelineno-2-169"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REACT_APP_API_SOCKET_URL=${REACT_APP_API_SOCKET_URL}</span>
+<a id="__codelineno-2-170" name="__codelineno-2-170" href="#__codelineno-2-170"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REACT_APP_STREAM_URL=${REACT_APP_STREAM_URL}</span>
+<a id="__codelineno-2-171" name="__codelineno-2-171" href="#__codelineno-2-171"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REACT_APP_OPEN_STREET_API_KEY=${REACT_APP_OPEN_STREET_API_KEY}</span>
+<a id="__codelineno-2-172" name="__codelineno-2-172" href="#__codelineno-2-172"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-173" name="__codelineno-2-173" href="#__codelineno-2-173"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-174" name="__codelineno-2-174" href="#__codelineno-2-174"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_mirasys_frnt.rule=Host(`${MIRASYS_FRNT_URL}`)&quot;</span>
+<a id="__codelineno-2-175" name="__codelineno-2-175" href="#__codelineno-2-175"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.{{C_PREFIX}}_mirasys_frnt.loadbalancer.server.port=3000&quot;</span>
+<a id="__codelineno-2-176" name="__codelineno-2-176" href="#__codelineno-2-176"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-177" name="__codelineno-2-177" href="#__codelineno-2-177"></a>
+<a id="__codelineno-2-178" name="__codelineno-2-178" href="#__codelineno-2-178"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_mirasys_frontend_central</span><span class="p">:</span>
+<a id="__codelineno-2-179" name="__codelineno-2-179" href="#__codelineno-2-179"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-2-180" name="__codelineno-2-180" href="#__codelineno-2-180"></a><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_frontend_central/</span>
+<a id="__codelineno-2-181" name="__codelineno-2-181" href="#__codelineno-2-181"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+<a id="__codelineno-2-182" name="__codelineno-2-182" href="#__codelineno-2-182"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_mirasys_frontend_central</span>
+<a id="__codelineno-2-183" name="__codelineno-2-183" href="#__codelineno-2-183"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-184" name="__codelineno-2-184" href="#__codelineno-2-184"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-185" name="__codelineno-2-185" href="#__codelineno-2-185"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-186" name="__codelineno-2-186" href="#__codelineno-2-186"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<a id="__codelineno-2-187" name="__codelineno-2-187" href="#__codelineno-2-187"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-188" name="__codelineno-2-188" href="#__codelineno-2-188"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq</span>
+<a id="__codelineno-2-189" name="__codelineno-2-189" href="#__codelineno-2-189"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_infra</span>
+<a id="__codelineno-2-190" name="__codelineno-2-190" href="#__codelineno-2-190"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-191" name="__codelineno-2-191" href="#__codelineno-2-191"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_frontend_central:/app</span>
+<a id="__codelineno-2-192" name="__codelineno-2-192" href="#__codelineno-2-192"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-193" name="__codelineno-2-193" href="#__codelineno-2-193"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REACT_APP_API_URL_CENTRAL=${REACT_APP_API_URL_CENTRAL}</span>
+<a id="__codelineno-2-194" name="__codelineno-2-194" href="#__codelineno-2-194"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-195" name="__codelineno-2-195" href="#__codelineno-2-195"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-196" name="__codelineno-2-196" href="#__codelineno-2-196"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_mirasys_frontend_central.rule=Host(`${MIRASYS_FRNT_CENT_URL}`)&quot;</span>
+<a id="__codelineno-2-197" name="__codelineno-2-197" href="#__codelineno-2-197"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.{{C_PREFIX}}_mirasys_frontend_central.loadbalancer.server.port=3000&quot;</span>
+<a id="__codelineno-2-198" name="__codelineno-2-198" href="#__codelineno-2-198"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-199" name="__codelineno-2-199" href="#__codelineno-2-199"></a>
+<a id="__codelineno-2-200" name="__codelineno-2-200" href="#__codelineno-2-200"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_mirasys_backend</span><span class="p">:</span>
+<a id="__codelineno-2-201" name="__codelineno-2-201" href="#__codelineno-2-201"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-2-202" name="__codelineno-2-202" href="#__codelineno-2-202"></a><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_backend/</span>
+<a id="__codelineno-2-203" name="__codelineno-2-203" href="#__codelineno-2-203"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+<a id="__codelineno-2-204" name="__codelineno-2-204" href="#__codelineno-2-204"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_mirasys_backend</span>
+<a id="__codelineno-2-205" name="__codelineno-2-205" href="#__codelineno-2-205"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-206" name="__codelineno-2-206" href="#__codelineno-2-206"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-207" name="__codelineno-2-207" href="#__codelineno-2-207"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-208" name="__codelineno-2-208" href="#__codelineno-2-208"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<a id="__codelineno-2-209" name="__codelineno-2-209" href="#__codelineno-2-209"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-210" name="__codelineno-2-210" href="#__codelineno-2-210"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq</span>
+<a id="__codelineno-2-211" name="__codelineno-2-211" href="#__codelineno-2-211"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_infra</span>
+<a id="__codelineno-2-212" name="__codelineno-2-212" href="#__codelineno-2-212"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-213" name="__codelineno-2-213" href="#__codelineno-2-213"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_backend:/app</span>
+<a id="__codelineno-2-214" name="__codelineno-2-214" href="#__codelineno-2-214"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-215" name="__codelineno-2-215" href="#__codelineno-2-215"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PORT=${BE_PORT}</span>
+<a id="__codelineno-2-216" name="__codelineno-2-216" href="#__codelineno-2-216"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_USER=${BE_MYSQL_USER}</span>
+<a id="__codelineno-2-217" name="__codelineno-2-217" href="#__codelineno-2-217"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_ROOT_PASSWORD=${BE_MYSQL_ROOT_PASSWORD}</span>
+<a id="__codelineno-2-218" name="__codelineno-2-218" href="#__codelineno-2-218"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_DATABASE=${BE_MYSQL_DATABASE}</span>
+<a id="__codelineno-2-219" name="__codelineno-2-219" href="#__codelineno-2-219"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_LOCAL_PORT=${BE_MYSQL_LOCAL_PORT}</span>
+<a id="__codelineno-2-220" name="__codelineno-2-220" href="#__codelineno-2-220"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBHOST=${BE_DBHOST}</span>
+<a id="__codelineno-2-221" name="__codelineno-2-221" href="#__codelineno-2-221"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_USERNAME=${BE_CENTRAL_DB_USERNAME}</span>
+<a id="__codelineno-2-222" name="__codelineno-2-222" href="#__codelineno-2-222"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_PASSWORD=${BE_CENTRAL_DB_PASSWORD}</span>
+<a id="__codelineno-2-223" name="__codelineno-2-223" href="#__codelineno-2-223"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DB_NAME=${BE_CENTRAL_DB_NAME}</span>
+<a id="__codelineno-2-224" name="__codelineno-2-224" href="#__codelineno-2-224"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CENTRAL_DBHOST=${BE_CENTRAL_DBHOST}</span>
+<a id="__codelineno-2-225" name="__codelineno-2-225" href="#__codelineno-2-225"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APP_URL=${BE_APP_URL}</span>
+<a id="__codelineno-2-226" name="__codelineno-2-226" href="#__codelineno-2-226"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_HOST=${BE_MYSQL_HOST}</span>
+<a id="__codelineno-2-227" name="__codelineno-2-227" href="#__codelineno-2-227"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JWT_SECRET=${JWT_SECRET}</span>
+<a id="__codelineno-2-228" name="__codelineno-2-228" href="#__codelineno-2-228"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JWT_EXPIRES_IN=${JWT_EXPIRES_IN}</span>
+<a id="__codelineno-2-229" name="__codelineno-2-229" href="#__codelineno-2-229"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-230" name="__codelineno-2-230" href="#__codelineno-2-230"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-231" name="__codelineno-2-231" href="#__codelineno-2-231"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_mirasys_backend.rule=Host(`${MIRASYS_BACKEND_URL}`)&quot;</span>
+<a id="__codelineno-2-232" name="__codelineno-2-232" href="#__codelineno-2-232"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.{{C_PREFIX}}_mirasys_backend.loadbalancer.server.port=3001&quot;</span>
+<a id="__codelineno-2-233" name="__codelineno-2-233" href="#__codelineno-2-233"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-234" name="__codelineno-2-234" href="#__codelineno-2-234"></a>
+<a id="__codelineno-2-235" name="__codelineno-2-235" href="#__codelineno-2-235"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_mirasys_streaming</span><span class="p">:</span>
+<a id="__codelineno-2-236" name="__codelineno-2-236" href="#__codelineno-2-236"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-2-237" name="__codelineno-2-237" href="#__codelineno-2-237"></a><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_streaming/</span>
+<a id="__codelineno-2-238" name="__codelineno-2-238" href="#__codelineno-2-238"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+<a id="__codelineno-2-239" name="__codelineno-2-239" href="#__codelineno-2-239"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_mirasys_streaming</span>
+<a id="__codelineno-2-240" name="__codelineno-2-240" href="#__codelineno-2-240"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-241" name="__codelineno-2-241" href="#__codelineno-2-241"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-2-242" name="__codelineno-2-242" href="#__codelineno-2-242"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-243" name="__codelineno-2-243" href="#__codelineno-2-243"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<a id="__codelineno-2-244" name="__codelineno-2-244" href="#__codelineno-2-244"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-245" name="__codelineno-2-245" href="#__codelineno-2-245"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq</span>
+<a id="__codelineno-2-246" name="__codelineno-2-246" href="#__codelineno-2-246"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_infra</span>
+<a id="__codelineno-2-247" name="__codelineno-2-247" href="#__codelineno-2-247"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-248" name="__codelineno-2-248" href="#__codelineno-2-248"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mirasys_streaming:/app</span>
+<a id="__codelineno-2-249" name="__codelineno-2-249" href="#__codelineno-2-249"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-250" name="__codelineno-2-250" href="#__codelineno-2-250"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-251" name="__codelineno-2-251" href="#__codelineno-2-251"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.{{C_PREFIX}}_mirasys_streaming.rule=Host(`${MIRASYS_STREAM_URL}`)&quot;</span>
+<a id="__codelineno-2-252" name="__codelineno-2-252" href="#__codelineno-2-252"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.{{C_PREFIX}}_mirasys_streaming.loadbalancer.server.port=2001&quot;</span>
+<a id="__codelineno-2-253" name="__codelineno-2-253" href="#__codelineno-2-253"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-254" name="__codelineno-2-254" href="#__codelineno-2-254"></a>
+<a id="__codelineno-2-255" name="__codelineno-2-255" href="#__codelineno-2-255"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<a id="__codelineno-2-256" name="__codelineno-2-256" href="#__codelineno-2-256"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:8.0</span>
+<a id="__codelineno-2-257" name="__codelineno-2-257" href="#__codelineno-2-257"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-258" name="__codelineno-2-258" href="#__codelineno-2-258"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-259" name="__codelineno-2-259" href="#__codelineno-2-259"></a><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-2-260" name="__codelineno-2-260" href="#__codelineno-2-260"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-261" name="__codelineno-2-261" href="#__codelineno-2-261"></a><span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${MASTER_DATABASE}</span>
+<a id="__codelineno-2-262" name="__codelineno-2-262" href="#__codelineno-2-262"></a><span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${ROOT_PASSWORD}</span>
+<a id="__codelineno-2-263" name="__codelineno-2-263" href="#__codelineno-2-263"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-264" name="__codelineno-2-264" href="#__codelineno-2-264"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dbdata:/var/lib/mysql/</span>
+<a id="__codelineno-2-265" name="__codelineno-2-265" href="#__codelineno-2-265"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-2-266" name="__codelineno-2-266" href="#__codelineno-2-266"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mirasys-network</span>
+<a id="__codelineno-2-267" name="__codelineno-2-267" href="#__codelineno-2-267"></a>
+<a id="__codelineno-2-268" name="__codelineno-2-268" href="#__codelineno-2-268"></a><span class="w">  </span><span class="nt">rabbitmq</span><span class="p">:</span>
+<a id="__codelineno-2-269" name="__codelineno-2-269" href="#__codelineno-2-269"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq:3-management</span>
+<a id="__codelineno-2-270" name="__codelineno-2-270" href="#__codelineno-2-270"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq</span>
+<a id="__codelineno-2-271" name="__codelineno-2-271" href="#__codelineno-2-271"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-272" name="__codelineno-2-272" href="#__codelineno-2-272"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RABBITMQ_DEFAULT_USER=ows</span>
+<a id="__codelineno-2-273" name="__codelineno-2-273" href="#__codelineno-2-273"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RABBITMQ_DEFAULT_PASS=ows@123</span>
+<a id="__codelineno-2-274" name="__codelineno-2-274" href="#__codelineno-2-274"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<a id="__codelineno-2-275" name="__codelineno-2-275" href="#__codelineno-2-275"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-276" name="__codelineno-2-276" href="#__codelineno-2-276"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq:/var/lib/rabbitmq/</span>
+<a id="__codelineno-2-277" name="__codelineno-2-277" href="#__codelineno-2-277"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-278" name="__codelineno-2-278" href="#__codelineno-2-278"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-279" name="__codelineno-2-279" href="#__codelineno-2-279"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.rabbitmq.rule=Host(`${RABBITMQ_URL}`)&quot;</span>
+<a id="__codelineno-2-280" name="__codelineno-2-280" href="#__codelineno-2-280"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.rabbitmq.loadbalancer.server.port=15672&quot;</span>
+<a id="__codelineno-2-281" name="__codelineno-2-281" href="#__codelineno-2-281"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-282" name="__codelineno-2-282" href="#__codelineno-2-282"></a>
+<a id="__codelineno-2-283" name="__codelineno-2-283" href="#__codelineno-2-283"></a><span class="w">  </span><span class="nt">phpmyadmin</span><span class="p">:</span>
+<a id="__codelineno-2-284" name="__codelineno-2-284" href="#__codelineno-2-284"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phpmyadmin/phpmyadmin</span>
+<a id="__codelineno-2-285" name="__codelineno-2-285" href="#__codelineno-2-285"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pma</span>
+<a id="__codelineno-2-286" name="__codelineno-2-286" href="#__codelineno-2-286"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<a id="__codelineno-2-287" name="__codelineno-2-287" href="#__codelineno-2-287"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-288" name="__codelineno-2-288" href="#__codelineno-2-288"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-289" name="__codelineno-2-289" href="#__codelineno-2-289"></a><span class="w">      </span><span class="nt">PMA_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a id="__codelineno-2-290" name="__codelineno-2-290" href="#__codelineno-2-290"></a><span class="w">      </span><span class="nt">PMA_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
+<a id="__codelineno-2-291" name="__codelineno-2-291" href="#__codelineno-2-291"></a><span class="w">      </span><span class="nt">PMA_ARBITRARY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-2-292" name="__codelineno-2-292" href="#__codelineno-2-292"></a><span class="w">      </span><span class="nt">UPLOAD_LIMIT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1024M</span>
+<a id="__codelineno-2-293" name="__codelineno-2-293" href="#__codelineno-2-293"></a><span class="w">      </span><span class="nt">MAX_EXECUTION_TIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">259200</span>
+<a id="__codelineno-2-294" name="__codelineno-2-294" href="#__codelineno-2-294"></a><span class="w">      </span><span class="nt">MAX_INPUT_TIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">259200</span>
+<a id="__codelineno-2-295" name="__codelineno-2-295" href="#__codelineno-2-295"></a><span class="w">      </span><span class="nt">UPLOAD_MAX_FILE_SIZE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">750M</span>
+<a id="__codelineno-2-296" name="__codelineno-2-296" href="#__codelineno-2-296"></a><span class="w">      </span><span class="nt">POST_MAX_SIZE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">750M</span>
+<a id="__codelineno-2-297" name="__codelineno-2-297" href="#__codelineno-2-297"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<a id="__codelineno-2-298" name="__codelineno-2-298" href="#__codelineno-2-298"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-2-299" name="__codelineno-2-299" href="#__codelineno-2-299"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.enable=true&quot;</span>
+<a id="__codelineno-2-300" name="__codelineno-2-300" href="#__codelineno-2-300"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.routers.phpmyadmin.rule=Host(`${PMA_URL}`)&quot;</span>
+<a id="__codelineno-2-301" name="__codelineno-2-301" href="#__codelineno-2-301"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;traefik.http.services.phpmyadmin.loadbalancer.server.port=80&quot;</span>
+<a id="__codelineno-2-302" name="__codelineno-2-302" href="#__codelineno-2-302"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-303" name="__codelineno-2-303" href="#__codelineno-2-303"></a>
+<a id="__codelineno-2-304" name="__codelineno-2-304" href="#__codelineno-2-304"></a><span class="w">  </span><span class="nt">mongo</span><span class="p">:</span>
+<a id="__codelineno-2-305" name="__codelineno-2-305" href="#__codelineno-2-305"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo:latest</span>
+<a id="__codelineno-2-306" name="__codelineno-2-306" href="#__codelineno-2-306"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-307" name="__codelineno-2-307" href="#__codelineno-2-307"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo</span>
+<a id="__codelineno-2-308" name="__codelineno-2-308" href="#__codelineno-2-308"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-309" name="__codelineno-2-309" href="#__codelineno-2-309"></a><span class="w">      </span><span class="nt">MONGO_INITDB_ROOT_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<a id="__codelineno-2-310" name="__codelineno-2-310" href="#__codelineno-2-310"></a><span class="w">      </span><span class="nt">MONGO_INITDB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${ROOT_PASSWORD}</span>
+<a id="__codelineno-2-311" name="__codelineno-2-311" href="#__codelineno-2-311"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-312" name="__codelineno-2-312" href="#__codelineno-2-312"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodata:/data/db</span>
+<a id="__codelineno-2-313" name="__codelineno-2-313" href="#__codelineno-2-313"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-314" name="__codelineno-2-314" href="#__codelineno-2-314"></a>
+<a id="__codelineno-2-315" name="__codelineno-2-315" href="#__codelineno-2-315"></a><span class="w">  </span><span class="nt">redis</span><span class="p">:</span>
+<a id="__codelineno-2-316" name="__codelineno-2-316" href="#__codelineno-2-316"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:latest</span>
+<a id="__codelineno-2-317" name="__codelineno-2-317" href="#__codelineno-2-317"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-318" name="__codelineno-2-318" href="#__codelineno-2-318"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-2-319" name="__codelineno-2-319" href="#__codelineno-2-319"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-320" name="__codelineno-2-320" href="#__codelineno-2-320"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redisdata:/data</span>
+<a id="__codelineno-2-321" name="__codelineno-2-321" href="#__codelineno-2-321"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-322" name="__codelineno-2-322" href="#__codelineno-2-322"></a>
+<a id="__codelineno-2-323" name="__codelineno-2-323" href="#__codelineno-2-323"></a><span class="w">  </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="nt">_elasticsearch</span><span class="p">:</span>
+<a id="__codelineno-2-324" name="__codelineno-2-324" href="#__codelineno-2-324"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">elasticsearch:8.17.4</span>
+<a id="__codelineno-2-325" name="__codelineno-2-325" href="#__codelineno-2-325"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-2-326" name="__codelineno-2-326" href="#__codelineno-2-326"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">C_PREFIX</span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">_elasticsearch</span>
+<a id="__codelineno-2-327" name="__codelineno-2-327" href="#__codelineno-2-327"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-328" name="__codelineno-2-328" href="#__codelineno-2-328"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">discovery.type=single-node</span>
+<a id="__codelineno-2-329" name="__codelineno-2-329" href="#__codelineno-2-329"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xpack.security.enabled=false</span>
+<a id="__codelineno-2-330" name="__codelineno-2-330" href="#__codelineno-2-330"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-331" name="__codelineno-2-331" href="#__codelineno-2-331"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">elasticsearchdata:/usr/share/elasticsearch/data</span>
+<a id="__codelineno-2-332" name="__codelineno-2-332" href="#__codelineno-2-332"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
+<a id="__codelineno-2-333" name="__codelineno-2-333" href="#__codelineno-2-333"></a><span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-2-334" name="__codelineno-2-334" href="#__codelineno-2-334"></a><span class="w">        </span><span class="nt">limits</span><span class="p">:</span>
+<a id="__codelineno-2-335" name="__codelineno-2-335" href="#__codelineno-2-335"></a><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4G</span><span class="w"> </span><span class="c1"># Adjust this according to your system</span>
+<a id="__codelineno-2-336" name="__codelineno-2-336" href="#__codelineno-2-336"></a><span class="w">        </span><span class="nt">reservations</span><span class="p">:</span>
+<a id="__codelineno-2-337" name="__codelineno-2-337" href="#__codelineno-2-337"></a><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2G</span>
+<a id="__codelineno-2-338" name="__codelineno-2-338" href="#__codelineno-2-338"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*mirasys-network</span>
+<a id="__codelineno-2-339" name="__codelineno-2-339" href="#__codelineno-2-339"></a>
+<a id="__codelineno-2-340" name="__codelineno-2-340" href="#__codelineno-2-340"></a><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-2-341" name="__codelineno-2-341" href="#__codelineno-2-341"></a><span class="w">  </span><span class="nt">dbdata</span><span class="p">:</span>
+<a id="__codelineno-2-342" name="__codelineno-2-342" href="#__codelineno-2-342"></a><span class="w">  </span><span class="nt">rabbitmq</span><span class="p">:</span>
+<a id="__codelineno-2-343" name="__codelineno-2-343" href="#__codelineno-2-343"></a><span class="w">  </span><span class="nt">mongodata</span><span class="p">:</span>
+<a id="__codelineno-2-344" name="__codelineno-2-344" href="#__codelineno-2-344"></a><span class="w">  </span><span class="nt">redisdata</span><span class="p">:</span>
+<a id="__codelineno-2-345" name="__codelineno-2-345" href="#__codelineno-2-345"></a><span class="w">  </span><span class="nt">elasticsearchdata</span><span class="p">:</span>
+<a id="__codelineno-2-346" name="__codelineno-2-346" href="#__codelineno-2-346"></a>
+<a id="__codelineno-2-347" name="__codelineno-2-347" href="#__codelineno-2-347"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-2-348" name="__codelineno-2-348" href="#__codelineno-2-348"></a><span class="w">  </span><span class="nt">mirasys-network</span><span class="p">:</span>
+<a id="__codelineno-2-349" name="__codelineno-2-349" href="#__codelineno-2-349"></a><span class="w">    </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Note</strong>: Make sure to replace <code>{{C_PREFIX}}</code> with your desired prefix for the containers. Ensure that the <code>docker-compose.dev.yaml</code> file is correctly configured with the necessary environment variables and paths.</p>
+</blockquote>
+<hr />
+<h2 id="4-deploy-the-project">4. Deploy the Project</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>./deploy.sh<span class="w"> </span>init-images<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>./deploy.sh<span class="w"> </span>development
+</code></pre></div>
+<hr />
+<h2 id="5-configure-the-host-file">5. Configure the Host File</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/hosts
+</code></pre></div>
+<p>Add the following:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>127.0.0.1 phpmyadmin.demo.mirasys.in
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>127.0.0.1 frontend-central.demo.mirasys.in
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>127.0.0.1 demo.mirasys.in
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>127.0.0.1 api-gateway.demo.mirasys.in
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>127.0.0.1 tenant-api-gateway.demo.mirasys.in
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>127.0.0.1 backend.demo.mirasys.in
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>127.0.0.1 stream.demo.mirasys.in
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>127.0.0.1 traefik.demo.mirasys.in
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>127.0.0.1 rabbitmq.demo.mirasys.in
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>127.0.0.1 infra.demo.mirasys.in
+</code></pre></div>
+<p>Press <code>CTRL+X</code>, then <code>Y</code>, then <code>ENTER</code> to save.</p>
+<hr />
+<h2 id="6-set-up-the-database">6. Set Up the Database</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>./create-tenant-db.sh
+</code></pre></div>
+<hr />
+<p>✅ <strong>Setup Completed!</strong></p>
+<p>Your Mirasys system is now ready with multiple domain support.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.sections", "navigation.tracking", "navigation.instant", "navigation.search.highlight", "navigation.search.suggest"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
