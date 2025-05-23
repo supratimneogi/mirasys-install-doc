@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mirasys-environment-package" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -408,6 +413,20 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Automated Setup
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -419,6 +438,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-remote-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Remote Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Installation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -658,6 +765,85 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-remote-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Remote Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Installation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -673,9 +859,88 @@
 
 
 
-  <h1>Automated Setup</h1>
-
-
+<h1 id="mirasys-environment-package">Mirasys Environment Package</h1>
+<p>A comprehensive Debian package designed to streamline the setup and configuration of the Mirasys operational environment.</p>
+<h2 id="overview">Overview</h2>
+<p>The Mirasys Environment Package provides a standardized, ready-to-use environment for all Mirasys systems and applications. This package:</p>
+<ul>
+<li>Automatically configures system settings for optimal Mirasys application performance</li>
+<li>Installs and manages all necessary dependencies</li>
+<li>Sets up required system services and configurations</li>
+<li>Ensures consistent environments across different deployments</li>
+<li>Simplifies the installation and maintenance process</li>
+</ul>
+<p>By using this package, system administrators can ensure that all Mirasys applications run in a properly configured environment, reducing setup errors and improving operational reliability.</p>
+<h2 id="version">Version</h2>
+<p>Current version: 1.0.0</p>
+<p>Release date: May 23, 2025</p>
+<p>Key features in this version:
+- Initial stable release with core environment configurations
+- Support for all current Mirasys applications
+- Automated dependency management
+- System optimization for Mirasys workloads</p>
+<h2 id="installation">Installation</h2>
+<h3 id="from-remote-repository">From Remote Repository</h3>
+<p>To install the Mirasys Environment Package, follow these simple steps:</p>
+<p><strong>Step 1</strong>: Download the latest release package from our remote repository:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Download the package</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget<span class="w"> </span>https://bitbucket.org/supratimneogi007/syncmaster/downloads/mirasys-env_1.0.0_all.deb
+</code></pre></div>
+<p><strong>Step 2</strong>: Install the package using the Debian package manager:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Install directly</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>mirasys-env_1.0.0_all.deb
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># If dependencies need to be resolved</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-f
+</code></pre></div>
+<p><strong>Step 3</strong>: Verify the installation was successful:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Check installation status</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-s<span class="w"> </span>mirasys-env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Status
+</code></pre></div>
+<p>You should see output confirming that the package is installed and properly configured.</p>
+<h3 id="system-requirements">System Requirements</h3>
+<ul>
+<li>Ubuntu 18.04 LTS or later / Debian 10 or later</li>
+<li>Minimum 2GB RAM (4GB recommended)</li>
+<li>500MB free disk space</li>
+<li>Internet connection (for dependency installation)</li>
+<li>Root or sudo privileges</li>
+</ul>
+<h2 id="pre-installation">Pre-Installation</h2>
+<p>Before installing the Mirasys Environment Package, ensure that your system meets the following requirements:</p>
+<ol>
+<li>
+<p><strong>Supported Operating Systems</strong>:</p>
+<ul>
+<li>Ubuntu 18.04 LTS or later</li>
+<li>Debian 10 or later</li>
+</ul>
+</li>
+<li>
+<p><strong>Hardware Requirements</strong>:</p>
+<ul>
+<li>Minimum 2GB RAM (4GB recommended)</li>
+<li>500MB free disk space</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Requirements</strong>:</p>
+<ul>
+<li>Internet connection (for dependency installation)</li>
+</ul>
+</li>
+<li>
+<p><strong>User Permissions</strong>:</p>
+<ul>
+<li>Root or sudo privileges</li>
+</ul>
+</li>
+</ol>
+<h2 id="post-installation">Post-Installation</h2>
+<p>After installation, the system is automatically configured and ready to run Mirasys applications. No additional setup is required.</p>
+<p>To check the environment configuration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mirasys-env
+</code></pre></div>
 
 
 
