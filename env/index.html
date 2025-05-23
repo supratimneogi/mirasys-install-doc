@@ -12,7 +12,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../defaultInstallation/">
+        <link rel="next" href="../env_auto/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Automated Setup - Mirasys Standalone Installation Docs</title>
+        <title>Manual Setup - Mirasys Standalone Installation Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mirasys-environment-package" class="md-skip">
+        <a href="#mirasys-development-environment-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Automated Setup
+              Manual Setup
             
           </span>
         </div>
@@ -193,7 +193,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../non_technical/" class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
     
@@ -214,7 +214,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href=".." class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   Environment Setup
@@ -318,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../non_technical/" class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,28 +382,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Manual Setup
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -420,7 +398,7 @@
           
   
   <span class="md-ellipsis">
-    Automated Setup
+    Manual Setup
     
   </span>
   
@@ -432,7 +410,7 @@
         
   
   <span class="md-ellipsis">
-    Automated Setup
+    Manual Setup
     
   </span>
   
@@ -455,69 +433,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#1-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      1. Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#version" class="md-nav__link">
+  <a href="#2-system-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Version
+      2. System Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#3-check-system-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#from-remote-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      From Remote Repository
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Requirements
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pre-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pre-Installation
+      3. Check System Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-installation" class="md-nav__link">
+  <a href="#4-docker-installation-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
-      Post-Installation
+      4. Docker Installation (Ubuntu)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-application-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Application Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-permission-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Permission Setup
     </span>
   </a>
   
@@ -527,6 +490,28 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../env_auto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automated Setup
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -775,69 +760,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#1-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      1. Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#version" class="md-nav__link">
+  <a href="#2-system-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Version
+      2. System Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#3-check-system-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#from-remote-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      From Remote Repository
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Requirements
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pre-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pre-Installation
+      3. Check System Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-installation" class="md-nav__link">
+  <a href="#4-docker-installation-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
-      Post-Installation
+      4. Docker Installation (Ubuntu)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-application-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Application Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-permission-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Permission Setup
     </span>
   </a>
   
@@ -859,87 +829,79 @@
 
 
 
-<h1 id="mirasys-environment-package">Mirasys Environment Package</h1>
-<p>A comprehensive Debian package designed to streamline the setup and configuration of the Mirasys operational environment.</p>
-<h2 id="overview">Overview</h2>
-<p>The Mirasys Environment Package provides a standardized, ready-to-use environment for all Mirasys systems and applications. This package:</p>
-<ul>
-<li>Automatically configures system settings for optimal Mirasys application performance</li>
-<li>Installs and manages all necessary dependencies</li>
-<li>Sets up required system services and configurations</li>
-<li>Ensures consistent environments across different deployments</li>
-<li>Simplifies the installation and maintenance process</li>
-</ul>
-<p>By using this package, system administrators can ensure that all Mirasys applications run in a properly configured environment, reducing setup errors and improving operational reliability.</p>
-<h2 id="version">Version</h2>
-<p>Current version: 1.0.0</p>
-<p>Release date: May 23, 2025</p>
-<p>Key features in this version:
-- Initial stable release with core environment configurations
-- Support for all current Mirasys applications
-- Automated dependency management
-- System optimization for Mirasys workloads</p>
-<h2 id="installation">Installation</h2>
-<h3 id="from-remote-repository">From Remote Repository</h3>
-<p>To install the Mirasys Environment Package, follow these simple steps:</p>
-<p><strong>Step 1</strong>: Download the latest release package from our remote repository:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Download the package</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget<span class="w"> </span>https://bitbucket.org/supratimneogi007/syncmaster/downloads/mirasys-env_1.0.0_all.deb
+<h1 id="mirasys-development-environment-setup">Mirasys Development Environment Setup</h1>
+<h2 id="1-overview">1. Overview</h2>
+<p>This document provides step-by-step instructions for setting up the Mirasys application in a local development environment on <strong>Ubuntu</strong> using <strong>Docker</strong>.</p>
+<h2 id="2-system-requirements">2. System Requirements</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating System</td>
+<td>Ubuntu 20.04.6 LTS x86_64</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>Must be installed</td>
+</tr>
+<tr>
+<td>User Permissions</td>
+<td>Sudo (administrator) privileges required</td>
+</tr>
+<tr>
+<td>Internet Access</td>
+<td>Required to download images and packages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-check-system-requirements">3. Check System Requirements</h2>
+<p>To check if your system meets the requirements, run the following commands:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>grep<span class="w"> </span>-o<span class="w"> </span>-w<span class="w"> </span><span class="s1">&#39;sse3\|ssse3\|sse4_1\|sse4_2\|popcnt\|cx16\|lahf_lm&#39;</span><span class="w"> </span>/proc/cpuinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
 </code></pre></div>
-<p><strong>Step 2</strong>: Install the package using the Debian package manager:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Install directly</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>mirasys-env_1.0.0_all.deb
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># If dependencies need to be resolved</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-f
+🟢 Output example if compatible:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cx16
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>lahf_lm
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>popcnt
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sse4_1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sse4_2
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>ssse3
+</code></pre></div></p>
+<h2 id="4-docker-installation-ubuntu">4. Docker Installation (Ubuntu)</h2>
+<p>To install Docker, run the following commands:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>software-properties-common
 </code></pre></div>
-<p><strong>Step 3</strong>: Verify the installation was successful:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Check installation status</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-s<span class="w"> </span>mirasys-env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/docker-archive-keyring.gpg
 </code></pre></div>
-<p>You should see output confirming that the package is installed and properly configured.</p>
-<h3 id="system-requirements">System Requirements</h3>
-<ul>
-<li>Ubuntu 18.04 LTS or later / Debian 10 or later</li>
-<li>Minimum 2GB RAM (4GB recommended)</li>
-<li>500MB free disk space</li>
-<li>Internet connection (for dependency installation)</li>
-<li>Root or sudo privileges</li>
-</ul>
-<h2 id="pre-installation">Pre-Installation</h2>
-<p>Before installing the Mirasys Environment Package, ensure that your system meets the following requirements:</p>
-<ol>
-<li>
-<p><strong>Supported Operating Systems</strong>:</p>
-<ul>
-<li>Ubuntu 18.04 LTS or later</li>
-<li>Debian 10 or later</li>
-</ul>
-</li>
-<li>
-<p><strong>Hardware Requirements</strong>:</p>
-<ul>
-<li>Minimum 2GB RAM (4GB recommended)</li>
-<li>500MB free disk space</li>
-</ul>
-</li>
-<li>
-<p><strong>Network Requirements</strong>:</p>
-<ul>
-<li>Internet connection (for dependency installation)</li>
-</ul>
-</li>
-<li>
-<p><strong>User Permissions</strong>:</p>
-<ul>
-<li>Root or sudo privileges</li>
-</ul>
-</li>
-</ol>
-<h2 id="post-installation">Post-Installation</h2>
-<p>After installation, the system is automatically configured and ready to run Mirasys applications. No additional setup is required.</p>
-<p>To check the environment configuration:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mirasys-env
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="s2">https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div></p>
+<blockquote>
+<p><strong>Note</strong>: Log out and log back in to apply group changes.</p>
+</blockquote>
+<p>To verify Docker installation:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>docker
+</code></pre></div>
+<h2 id="5-application-setup">5. Application Setup</h2>
+<p>Clone the Mirasys repository using one of the following commands:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Clone with specific branch</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;YOUR_GIT_REPOSITORY_LINK&gt;<span class="w"> </span>-b<span class="w"> </span>&lt;BRANCH_NAME&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Clone default branch</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;YOUR_GIT_REPOSITORY_LINK&gt;
+</code></pre></div>
+<h2 id="6-permission-setup">6. Permission Setup</h2>
+<p>After cloning the repository, navigate to the project directory and set the necessary permissions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>mirasys.setup.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>chmod<span class="w"> </span>+x<span class="w"> </span>setupScript/*.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>chmod<span class="w"> </span>+x<span class="w"> </span>troubleshoot-system/*.sh
 </code></pre></div>
 
 
