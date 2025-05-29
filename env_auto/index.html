@@ -872,8 +872,8 @@
 </ul>
 <p>By using this package, system administrators can ensure that all Mirasys applications run in a properly configured environment, reducing setup errors and improving operational reliability.</p>
 <h2 id="version">Version</h2>
-<p>Current version: 1.0.0</p>
-<p>Release date: May 23, 2025</p>
+<p>Current version: 1.2.4</p>
+<p>Release date: May 28, 2025</p>
 <p>Key features in this version:
 - Initial stable release with core environment configurations
 - Support for all current Mirasys applications
@@ -884,11 +884,11 @@
 <p>To install the Mirasys Environment Package, follow these simple steps:</p>
 <p><strong>Step 1</strong>: Download the latest release package from our remote repository:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Download the package</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget<span class="w"> </span>https://github.com/supratimneogi/mirasys-install-doc/releases/download/v1.1.1/mirasys-env_1.1.1_all.deb
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget<span class="w"> </span>https://github.com/supratimneogi/mirasys-install-doc/releases/download/v1.2.4/mirasys-env_1.2.4_all.deb
 </code></pre></div>
 <p><strong>Step 2</strong>: Install the package using the Debian package manager:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Install directly</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>mirasys-env_1.0.0_all.deb
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./mirasys-env_1.2.4_all.deb
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># If dependencies need to be resolved</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-f
@@ -938,8 +938,34 @@
 </ol>
 <h2 id="post-installation">Post-Installation</h2>
 <p>After installation, the system is automatically configured and ready to run Mirasys applications. No additional setup is required.</p>
-<p>To check the environment configuration:</p>
+<p>To check the environment configuration, run:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mirasys-env
+</code></pre></div>
+<p>You will enter an interactive setup session. Typical flow:</p>
+<p>1) You’ll be prompted to choose the Git URL type (HTTPS or SSH).<br />
+   – Enter <code>1</code> for HTTPS (you’ll then supply your tokenized URL).<br />
+   – Enter <code>2</code> for SSH (you’ll then supply the SSH URL).</p>
+<p>2) You’ll be asked for the actual repository URL:<br />
+   – Provide the HTTPS URL in the form <code>https://&lt;user&gt;:&lt;token&gt;@bitbucket.org/intellexio/mirasysindia_devops.git</code>,<br />
+     or the SSH URL <code>git@bitbucket.org:intellexio/mirasysindia_devops.git</code>.  </p>
+<p>3) You’ll be prompted for the installation directory (absolute or relative).<br />
+   – The script converts it to an absolute path and creates it if missing.  </p>
+<p>4) You’ll choose the Git branch (default <code>AUTOMATION_INSTALLATION_FINALIZED</code>).  </p>
+<p>Once inputs are complete, the script will:</p>
+<ul>
+<li>Clone the Mirasys repository into your chosen directory  </li>
+<li>Fix file ownership to your user  </li>
+<li>Install Docker if missing  </li>
+<li>Set execution permissions on setup scripts  </li>
+</ul>
+<p>At the end you will see:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>✅ Ownership set to &lt;you&gt;.
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>✅ Docker is already installed.      # or “Docker installation complete”
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>✅ Permissions set successfully!
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>🚀 Mirasys environment setup complete.
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>👉 To install Mirasys, run:
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    cd &quot;&lt;your-path&gt;/mirasysindia_devops&quot;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    sudo ./mirasys.setup.sh install
 </code></pre></div>
 
 
