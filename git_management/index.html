@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../defaultInstallation/">
+        <link rel="prev" href="../multiDomainInstallationAuto/">
       
-      
-        <link rel="next" href="../multiDomainInstallation/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Automated Installation - Mirasys Standalone Installation Docs</title>
+        <title>Git Strategy & Release Management - Mirasys Standalone Installation Docs</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mirasys-installation-management-guide-standalone" class="md-skip">
+        <a href="#mirasys-git-strategy-release-management" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Automated Installation
+              Git Strategy & Release Management
             
           </span>
         </div>
@@ -226,12 +224,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../defaultInstallation/" class="md-tabs__link">
           
   
@@ -281,9 +277,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../git_management/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -447,30 +445,27 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -482,7 +477,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Default Installation
@@ -515,31 +510,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Automated Installation
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../defaultInstallationAuto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,164 +523,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-clone-the-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Clone the Project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-grant-execution-permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Grant Execution Permissions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-running-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Running the Script
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 3: Running the Script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-install-mirasys" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Install Mirasys
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optional-steps-for-restarting-the-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional Steps for Restarting the Application
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-start-mirasys-optional-for-restarting-the-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Start Mirasys (Optional, for restarting the application)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-stop-mirasys-optional-but-necessary-before-restarting" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Stop Mirasys (Optional, but necessary before restarting)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-configure-mirasys-hosts-optional-to-ensure-correct-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Configure Mirasys Hosts (Optional, to ensure correct network
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      settings)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#issues-related-to-host-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Issues Related to Host Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-issues-and-fixes" class="md-nav__link">
-    <span class="md-ellipsis">
-      General Issues and Fixes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contact-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contact Support
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -838,10 +654,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../git_management/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git Strategy & Release Management
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -851,6 +688,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-main-branch-as-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Main Branch as Production
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-version-based-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Version-Based Releases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-example-cloning-a-specific-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Example: Cloning a Specific Version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-release-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Release Artifacts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-future-updates-via-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Future Updates via Tags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rollback-on-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Rollback on Issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -882,138 +802,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#1-main-branch-as-production" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      1. Main Branch as Production
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-clone-the-project" class="md-nav__link">
+  <a href="#2-version-based-releases" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Clone the Project
+      2. Version-Based Releases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-grant-execution-permissions" class="md-nav__link">
+  <a href="#3-example-cloning-a-specific-version" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Grant Execution Permissions
+      3. Example: Cloning a Specific Version
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-running-the-script" class="md-nav__link">
+  <a href="#4-release-artifacts" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Running the Script
+      4. Release Artifacts
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Step 3: Running the Script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-install-mirasys" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Install Mirasys
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optional-steps-for-restarting-the-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional Steps for Restarting the Application
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-start-mirasys-optional-for-restarting-the-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Start Mirasys (Optional, for restarting the application)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-stop-mirasys-optional-but-necessary-before-restarting" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Stop Mirasys (Optional, but necessary before restarting)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-configure-mirasys-hosts-optional-to-ensure-correct-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Configure Mirasys Hosts (Optional, to ensure correct network
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      settings)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#5-future-updates-via-tags" class="md-nav__link">
     <span class="md-ellipsis">
-      Troubleshooting
+      5. Future Updates via Tags
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#issues-related-to-host-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Issues Related to Host Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-issues-and-fixes" class="md-nav__link">
-    <span class="md-ellipsis">
-      General Issues and Fixes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contact-support" class="md-nav__link">
+  <a href="#6-rollback-on-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      Contact Support
+      6. Rollback on Issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
     </span>
   </a>
   
@@ -1035,83 +880,45 @@
 
 
 
-<h1 id="mirasys-installation-management-guide-standalone">Mirasys Installation &amp; Management Guide (Standalone)</h1>
-<h2 id="overview">Overview</h2>
-<p>This document provides comprehensive, step-by-step instructions for installing,
-starting, stopping, and configuring Mirasys using the provided Bash script. It ensures a
-seamless setup process for both default and multi-domain installations. Additionally, it
-covers troubleshooting steps to resolve common issues.</p>
-<h2 id="step-1-clone-the-project">Step 1: Clone the Project</h2>
-<p>First, clone the repository containing the script and necessary setup files. Use the
-following commands:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;your-repo-url&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>&lt;your-repo-folder&gt;
+<h1 id="mirasys-git-strategy-release-management">Mirasys Git Strategy &amp; Release Management</h1>
+<h2 id="1-main-branch-as-production">1. Main Branch as Production</h2>
+<p>In the Mirasys workflow, the <code>main</code> branch serves as the <strong>production branch</strong>. All stable and production-ready code is merged into <code>main</code>.</p>
+<hr />
+<h2 id="2-version-based-releases">2. Version-Based Releases</h2>
+<p>To maintain control over the <code>main</code> branch and enable structured deployments, Mirasys utilizes <strong>versioned branches and tagged releases</strong>. These releases help ensure consistency and traceability in production environments.</p>
+<hr />
+<h2 id="3-example-cloning-a-specific-version">3. Example: Cloning a Specific Version</h2>
+<p>To work with a specific Mirasys version, such as <code>v4.0.0-lts (milestone4)</code>, clone the corresponding branch:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>v4.0.0-lts<span class="w"> </span>https://github.com/mirasys/repository.git
 </code></pre></div>
-<h2 id="step-2-grant-execution-permissions">Step 2: Grant Execution Permissions</h2>
-<p>Ensure the script and its supporting scripts have the necessary permissions to execute:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>mirasys.setup.sh
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>chmod<span class="w"> </span>+x<span class="w"> </span>setupScript/*.sh
+<hr />
+<h2 id="4-release-artifacts">4. Release Artifacts</h2>
+<p>Each release may include binary artifacts such as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mirasys-env_1.2.4_all.deb
 </code></pre></div>
-<h2 id="step-3-running-the-script">Step 3: Running the Script</h2>
-<p>The script supports multiple commands and must always be run with sudo to ensure
-proper execution.</p>
-<h3 id="1-install-mirasys">1. Install Mirasys</h3>
-<p>When executing the installation command, the user is prompted to choose between a
-<strong>default installation</strong>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>./mirasys.setup.sh<span class="w"> </span>install
+<p>These files are bundled with the release and used for deployment and environment setup.</p>
+<hr />
+<h2 id="5-future-updates-via-tags">5. Future Updates via Tags</h2>
+<p>Future LTS (Long-Term Support) updates are tracked using tags like <code>v4.0.2-lts</code>. To update, Mirasys simply needs to switch to the updated branch/tag:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>--tags
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>v4.0.2-lts
 </code></pre></div>
-<p><strong><em>Installation Options</em></strong></p>
+<p>This allows seamless migration to newer stable versions.</p>
+<hr />
+<h2 id="6-rollback-on-issues">6. Rollback on Issues</h2>
+<p>If a new LTS release introduces issues, Mirasys can revert to a previous stable LTS version by switching branches:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>--tags
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>v4.0.0-lts
+</code></pre></div>
+<p>This strategy ensures safe rollbacks and system stability.</p>
+<hr />
+<h2 id="summary">Summary</h2>
 <ul>
-<li><strong>Default Installation (d</strong><strong>)</strong> :
-    o Removes existing configuration files.
-    o Initializes Docker images.
-    o Builds and deploys the application.
-    o Migrates databases.
-    o Configures the hosts file.
-    o Ensures the application is properly set up with default settings.</li>
+<li><code>main</code> = production-ready</li>
+<li>Versioned branches like <code>v4.0.0-lts</code> manage releases</li>
+<li><code>.deb</code> binaries are packaged with each release</li>
+<li>Tags/branches allow easy updates and rollback</li>
 </ul>
-<h3 id="optional-steps-for-restarting-the-application">Optional Steps for Restarting the Application</h3>
-<p>To restart the application, follow these steps. The application must be <strong>stopped (down)
-before starting (start) again</strong> to avoid conflicts.</p>
-<h3 id="2-start-mirasys-optional-for-restarting-the-application">2. Start Mirasys (Optional, for restarting the application)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>./mirasys.setup.sh<span class="w"> </span>start
-</code></pre></div>
-<p>This command starts Mirasys using the deployment script, ensuring that all required
-services are properly initialized.</p>
-<h3 id="3-stop-mirasys-optional-but-necessary-before-restarting">3. Stop Mirasys (Optional, but necessary before restarting)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>./mirasys.setup.sh<span class="w"> </span>down
-</code></pre></div>
-<p>This command stops Mirasys gracefully, ensuring that all services are shut down
-properly before a restart.</p>
-<h3 id="4-configure-mirasys-hosts-optional-to-ensure-correct-network">4. Configure Mirasys Hosts (Optional, to ensure correct network</h3>
-<h3 id="settings">settings)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>./mirasys.setup.sh<span class="w"> </span>hostConfig
-</code></pre></div>
-<p>This applies necessary host configurations, updating the system’s /etc/hosts file with
-the required entries.</p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>If issues arise during installation, deployment, or operation, refer to the following
-troubleshooting steps.</p>
-<h3 id="issues-related-to-host-configuration">Issues Related to Host Configuration</h3>
-<ul>
-<li>If the host configuration does not apply correctly, ensure you have the necessary
-    permissions to modify /etc/hosts.</li>
-<li>Run the following command to manually check the hosts file: cat /etc/hosts</li>
-<li>If necessary, rerun the host configuration script: sudo ./mirasys.setup.sh
-    hostConfig</li>
-</ul>
-<h3 id="general-issues-and-fixes">General Issues and Fixes</h3>
-<ul>
-<li><strong>Permission Errors:</strong> If you encounter permission-related errors, make sure the
-    script is always run with sudo: sudo ./mirasys.setup.sh <command></li>
-<li><strong>Missing Dependencies:</strong> Ensure that all required dependencies (such as Docker
-    and Git) are installed before executing the script.</li>
-<li><strong>Script Execution Failure:</strong> If any script fails during execution, check the logs for
-    detailed error messages and take appropriate action.</li>
-</ul>
-<h2 id="contact-support">Contact Support</h2>
-<p>For further assistance, reach out to your system administrator or the official support
-team.</p>
 
 
 
