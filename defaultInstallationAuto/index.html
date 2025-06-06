@@ -656,18 +656,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-configure-mirasys-hosts-optional-to-ensure-correct-network" class="md-nav__link">
+  <a href="#4-configure-mirasys-hosts-optional-to-ensure-correct-network-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Configure Mirasys Hosts (Optional, to ensure correct network
+      4. Configure Mirasys Hosts (Optional, to ensure correct network settings)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
+  <a href="#5-update-mirasys-optional-to-update-the-application-with-the-latest-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      settings)
+      5. Update Mirasys (Optional, to update the application with the latest settings)
     </span>
   </a>
   
@@ -993,18 +993,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-configure-mirasys-hosts-optional-to-ensure-correct-network" class="md-nav__link">
+  <a href="#4-configure-mirasys-hosts-optional-to-ensure-correct-network-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Configure Mirasys Hosts (Optional, to ensure correct network
+      4. Configure Mirasys Hosts (Optional, to ensure correct network settings)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
+  <a href="#5-update-mirasys-optional-to-update-the-application-with-the-latest-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      settings)
+      5. Update Mirasys (Optional, to update the application with the latest settings)
     </span>
   </a>
   
@@ -1121,12 +1121,14 @@ services are properly initialized.</p>
 </code></pre></div>
 <p>This command stops Mirasys gracefully, ensuring that all services are shut down
 properly before a restart.</p>
-<h3 id="4-configure-mirasys-hosts-optional-to-ensure-correct-network">4. Configure Mirasys Hosts (Optional, to ensure correct network</h3>
-<h3 id="settings">settings)</h3>
+<h3 id="4-configure-mirasys-hosts-optional-to-ensure-correct-network-settings">4. Configure Mirasys Hosts (Optional, to ensure correct network settings)</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>./mirasys.setup.sh<span class="w"> </span>hostConfig
 </code></pre></div>
 <p>This applies necessary host configurations, updating the system’s /etc/hosts file with
 the required entries.</p>
+<h3 id="5-update-mirasys-optional-to-update-the-application-with-the-latest-settings">5. Update Mirasys (Optional, to update the application with the latest settings)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>./mirasys.setup.sh<span class="w"> </span>update
+</code></pre></div>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>If issues arise during installation, deployment, or operation, refer to the following
 troubleshooting steps.</p>
